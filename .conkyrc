@@ -62,9 +62,9 @@ ${color grey}Swap:$color $swap/$swapmax - $swapperc% ${swapbar 4}
 ${color grey}Uso de CPU:$color $cpu% ${cpubar 4}
 ${color grey}Procesos:$color $processes  ${color grey}Running:$color $running_processes
 $hr
-${color red}IP WAN: $color${execi 1000 wget -q -O- http://ipecho.net/plain; echo}
+${color white}IP WAN: $color${execi 1000 wget -q -O- http://ipecho.net/plain; echo}
 $hr
-${color blue}IP LAN: $color${addr wlp1s0}
+${color white}IP LAN: $color${addr wlp1s0}
 $hr
 ${color grey}Sistema de archivos:
  /    $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
