@@ -42,7 +42,7 @@ conky.config = {
     show_graph_range = false,
     show_graph_scale = false,
     stippled_borders = 0,
-    update_interval = 1.0,
+    update_interval = 5.0,
     uppercase = false,
     use_spacer = 'none',
     own_window_argb_visual = true,
@@ -52,25 +52,25 @@ conky.config = {
 }
 
 conky.text = [[
-${color grey}Host:$color ${scroll 32 Conky $conky_version - $sysname $nodename $kernel $machine}
+${color grey}Host $color ${scroll 32 Conky $conky_version - $sysname $nodename $kernel $machine}
 $hr
-${color grey}Tiempo de actividad:$color $uptime
-${color grey}Frecuencia (en MHz):$color $freq
-${color grey}Frecuencia (en GHz):$color $freq_g
-${color grey}RAM:$color $mem/$memmax - $memperc% ${membar 4}
-${color grey}Swap:$color $swap/$swapmax - $swapperc% ${swapbar 4}
-${color grey}Uso de CPU:$color $cpu% ${cpubar 4}
-${color grey}Procesos:$color $processes  ${color grey}Running:$color $running_processes
+${color grey}Tiempo de actividad $color $uptime
+${color grey}Frecuencia (en MHz) $color $freq
+${color grey}Frecuencia (en GHz) $color $freq_g
+${color grey}RAM $color $mem/$memmax - $memperc% ${membar 4}
+${color grey}Swap $color $swap/$swapmax - $swapperc% ${swapbar 4}
+${color grey}Uso de CPU $color $cpu% ${cpubar 4}
+${color grey}Procesos $color $processes  ${color grey}Running $color $running_processes
 $hr
-${color white}IP WAN: $color${execi 1000 wget -q -O- http://ipecho.net/plain; echo}
+${color grey}IP WAN $color${execi 1000 wget -q -O- http://ipecho.net/plain; echo}
 $hr
-${color white}IP LAN: $color${addr wlp1s0}
+${color grey}IP LAN $color${addr wlp1s0}
 $hr
-${color grey}Sistema de archivos:
- /    $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
- /home $color${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
-${color grey}Red:
-Up:$color ${upspeed wlp1s0} ${color grey} - Down:$color ${downspeed wlp1s0}
+${color grey}Sistema de archivos 
+${color grey} /     $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
+${color grey} /home $color${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
+${color grey}Red 
+Up $color ${upspeed wlp1s0} ${color grey} - Down $color ${downspeed wlp1s0}
 $hr
 ${color grey} Aplicativo          PID    CPU%   MEM%
 ${color lightgrey} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
