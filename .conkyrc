@@ -25,7 +25,7 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     extra_newline = false,
-    font = 'DejaVu Sans Mono:size=13',
+    font = 'DejaVu Sans Mono:size=12',
     gap_x = 0,
     gap_y = 30,
     minimum_height = 5,
@@ -69,7 +69,7 @@ $hr
 ${color grey}Red Up $color ${upspeed wlp1s0} ${color grey} - Down $color ${downspeed wlp1s0}
 $hr
 ${color grey}Sistema de archivos 
-${color grey} /     $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
+${color grey} /      $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
 ${color grey} /home  $color${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
 $hr
 ${color grey}$color Aplicativo          PID    CPU%   MEM%
